@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd 
 
-from metrics import accuaracy
+from metrics import f1_score, accuracy
 from algorithms import sigmoid
 
 class ShallowLogisticClassifier(object):
@@ -33,10 +33,11 @@ class ShallowLogisticClassifier(object):
         db = (1 / self.no_of_samples) * np.sum(dz)
 
         cost = self.cost(A, self.train_y)
-        acc = accuaracy(preds, self.train_y)
+        f1 = f1_score(preds, self.train_y)
         
         print(f'cost = {cost}')
-        print(f'accuracy = {acc}')
+        print(f'f1 score = {f1}')
+        print(f'accuracy = {accuracy(A, self.train_y)}')
 
         return {'dw': dw, 'db': db}, cost
     
@@ -70,9 +71,10 @@ class ShallowLogisticClassifier(object):
 
         A = self.activation()
         preds = self.probability_to_preds(A)
-        acc = accuaracy(preds, self.valid_y)
+        f1 = f1_score(preds, self.valid_y)
 
-        print(f'valid acc {acc}')
+        print(f'valid f1_score {f1}')
+        print(f'valid acc {accuracy(A, preds)}')
 
     def activation(self):
         

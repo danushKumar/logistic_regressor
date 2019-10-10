@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
  
-def accuaracy(a, y):
+def f1_score(a, y):
     actuals = pd.Series(np.squeeze(y))
     preds = pd.Series(np.squeeze(a))
     
@@ -18,3 +18,7 @@ def accuaracy(a, y):
     score = 2 * ((precision * recall) / (precision + recall))
     
     return score
+
+def accuracy(a, y):
+
+    return 100 - np.mean(np.abs(a - y)) * 100

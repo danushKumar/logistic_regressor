@@ -1,5 +1,4 @@
-shallow_logistic_classifier
-__pycache__
 data.*
 model
 generate_csv.py
+Pipfile*
