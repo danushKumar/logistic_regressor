@@ -1,0 +1,5 @@
+shallow_logistic_classifier
+model
+data.*
+Pipfile
+Pipfile.lock
