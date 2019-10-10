@@ -90,7 +90,8 @@ class ShallowLogisticClassifier(object):
         return a
 
     def cost(self, preds, actuals):
- 
+        print(preds.shape, actuals.shape)
+        print(self.no_of_samples)
         cost = -1 * (np.dot(actuals, np.log(preds).T) + np.dot((1 - actuals), np.log(1 - preds).T)) / self.no_of_samples
         
         return cost

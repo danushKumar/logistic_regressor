@@ -11,7 +11,7 @@ def train(path):
                                            data_loader.valid_x,
                                            data_loader.valid_y, 
                                            threshold = 0.4,
-                                           learning_rate = 0.005)
+                                           learning_rate = 0.001)
     classifier(epoch = 10000)
     save_model(classifier)
 
