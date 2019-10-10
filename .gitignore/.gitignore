@@ -3,3 +3,4 @@ model
 data.*
 Pipfile
 Pipfile.lock
+__pycache__
