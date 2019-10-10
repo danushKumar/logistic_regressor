@@ -9,7 +9,7 @@ def train(path):
                                            data_loader.train_y,
                                            data_loader.valid_x,
                                            data_loader.valid_y)
-    classifier()
+    classifier(epoch = 10000)
     save_model(classifier)
 
 def save_model(model):

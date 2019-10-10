@@ -18,9 +18,9 @@ class ShallowLogisticClassifier(object):
         self.no_of_samples = train_x.shape[1]
         self.train = train
 
-    def __call__(self):
+    def __call__(self, epoch = 5000):
         
-        self.optimize(5000)
+        self.optimize(epoch)
 
     def propogate(self):
 
@@ -40,7 +40,7 @@ class ShallowLogisticClassifier(object):
 
         return {'dw': dw, 'db': db}, cost
     
-    def optimize(self, epoch = 5000):
+    def optimize(self, epoch):
 
         self.cost_list = []
 
