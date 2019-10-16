@@ -2,9 +2,7 @@ import numpy as np
 import cv2 
 
 def target_value_encoder(y):
-    
     to_category = y.astype('category')
-
     to_category = to_category.cat.codes 
 
     return to_category

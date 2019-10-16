@@ -27,7 +27,6 @@ def save_model(model):
         pickle.dump(pkl_representation, file) 
 
 def load_weights(path):
-    
     pkl_obj = None
     model_obj = None
 
