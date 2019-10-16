@@ -21,4 +21,13 @@ def f1_score(a, y):
 
 def accuracy(a, y):
 
-    return 100 - np.mean(np.abs(a - y)) * 100
+    acc = 100 - np.mean(np.abs(a - y)) * 100
+
+    return acc
+
+def probability_to_preds(a, threshold):
+
+        preds = a >= threshold
+
+        return preds.astype(int)
+        

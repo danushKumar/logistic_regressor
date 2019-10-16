@@ -21,4 +21,5 @@ def read_image(data):
     images = images.reshape((images.shape[0], images.shape[1] * images.shape[2]))
     images = images.T / 255
     print(images.shape)
+    
     return images
