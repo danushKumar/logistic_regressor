@@ -1,1 +1,1 @@
-# shallow-logistic-classifier
+# logistic-classifier
